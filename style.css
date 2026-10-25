@@ -1,0 +1,55 @@
+/* Контейнер: делает сетку карточек, которая адаптивно подстраивается под экран */
+#container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Стили самой карточки */
+  .card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  /* Эффект при наведении на карточку */
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  }
+  
+  /* Изображение товара */
+  .card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover; /* Изображение не искажается, а красиво заполняет область */
+    border-radius: 8px;
+    margin-bottom: 12px;
+  }
+  
+  /* Название товара */
+  .card h2 {
+    font-size: 1.1rem;
+    font-family: sans-serif;
+    color: #333333;
+    margin: 8px 0 4px 0;
+    line-height: 1.3;
+  }
+  
+  /* Цена товара */
+  .card h3 {
+    font-size: 1.25rem;
+    font-family: sans-serif;
+    color: #2e7d32; /* Приятный зеленый цвет для цены */
+    font-weight: bold;
+    margin: 4px 0 0 0;
+  }
